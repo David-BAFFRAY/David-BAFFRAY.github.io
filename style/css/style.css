@@ -55,7 +55,7 @@ section > article > p {
 
 .attribution {
     position: relative;
-    bottom: 7vh;
+    bottom: 9vh;
     text-align: center;
 }
 
@@ -68,6 +68,10 @@ section > article > p {
 
 @media only screen and (max-width: 375px) {
     
+    section {
+        height: 65vh;
+    }
+
     section > article {
         width: 75vw;
         height: 75vh;
@@ -75,7 +79,7 @@ section > article > p {
     
     section > article > img {
         width: 60vw;
-        height: 38vh;
+        height: 30vh;
     }
     
     section > article > .p__main {
