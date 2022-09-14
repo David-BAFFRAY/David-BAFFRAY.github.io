@@ -55,7 +55,7 @@ section > article > p {
 
 .attribution {
     position: relative;
-    bottom: 9vh;
+    bottom: 2vh;
     text-align: center;
 }
 
@@ -96,6 +96,10 @@ section > article > p {
         font-weight: 400;
         line-height: 2vh;
         padding: 0 25px;
+    }
+
+    .attribution {
+        bottom: 10.5vh;
     }
 
     .attribution,
