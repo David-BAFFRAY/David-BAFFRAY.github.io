@@ -7,7 +7,6 @@ body {
     height: 100vh;
     margin: auto;
     background-color: #F0F0F0;
-    overflow: hidden;
 }
 
 section {
@@ -74,7 +73,7 @@ section > article > p {
 
     section > article {
         width: 75vw;
-        height: 75vh;
+        height: 55vh;
     }
     
     section > article > img {
