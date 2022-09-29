@@ -1,0 +1,977 @@
+/* ============== Variable CSS ============== */
+
+:root {
+    --main-font-family: Space Grotesk;
+    --main-font-size-mobile: 3vw;
+    --main-font-size-tablet: 2vw;
+    --main-font-size-desktop: 1vw;
+    --font-bold: 700;
+    --error-color: red;
+    --background-button: rgb(34,8,48);
+    --link-footer: rgb(36, 160, 36);
+}
+
+/* ============== Responsive design for mobile ============== */
+
+@media only screen and (max-width: 429px) {
+    
+    /* This is structure of display */
+
+    body {
+        position: fixed;
+        width: 100vw;
+        height: auto;
+        display: grid;
+        grid-template-areas: 
+            "head"
+            "bod"
+            "foot";
+    }
+
+    body > header {
+        grid-area: head;
+    }
+
+    body > section {
+        grid-area: bod;
+    }
+
+    body > footer {
+        grid-area: foot;
+    }
+
+    header {
+        height: 30vh;
+        background: no-repeat;
+        background-image: url(../../assets/images/bg-main-mobile.png);
+    }
+
+    /* This is credit-card display */
+
+    .front__card {
+        position: relative;
+        top: 16vh;
+        left: 6vw;
+        color: white;
+        z-index: 5;
+    }
+
+    .front__card > img {
+        width: 70vw;
+        height: 21vh;
+    }
+
+    .front__card > .logo__card {
+        position: absolute;
+        bottom: 10.5vh;
+        left: 3.5vw;
+    }
+
+    .front__card > .logo__card > svg {
+        width: 15vw;
+        height: 10vh;
+    }
+
+    .front__card > .number__card,
+    .front__card > .name__card,
+    .front__card > .date__card {
+        position: absolute;
+        font-family: var(--main-font-family);
+    }
+
+
+    .front__card > .number__card {
+        bottom: 8vh;
+        left: 5vw;
+        word-spacing: 1vw;
+        letter-spacing: .2px;
+        font-size: 5vw;
+    }
+
+    .front__card > .name__card {
+        bottom: 3vh;
+        left: 5vw;
+        font-size: 3vw;
+    }
+
+    .front__card > .date__card {
+        display: flex;
+        flex-direction: row;
+        bottom: 3vh;
+        right: 35vw;
+        font-size: 3vw;
+    }
+
+    .front__card > .date__card > div {
+        margin: 0 1vw;
+    }
+
+    .back__card {
+        position: relative;
+        bottom: 17.3vh;
+        left: 19vw;
+        color: white;
+        z-index: 1;
+    }
+
+    .back__card > img {
+        width: 70vw;
+        height: 21vh;
+    }
+
+    .back__card > .cvc__card {
+        position: absolute;
+        bottom: 10vh;
+        right: 37.5vw;
+        font-family: var(--main-font-family);
+        font-size: 4vw;
+    }
+
+    
+/* =========== This is for invalid and valid fields style =========== */
+
+    .error {
+        color: var(--error-color);
+        font-size: .9em;
+    }
+
+    .form__name > div > .error,
+    .form__number > div > .error {
+        width: 85%;
+        margin: 0 0 1em 2.8em;
+    }
+
+    .success {
+        color: rgb(0, 0, 0);
+        font-size: .6em;
+    }
+
+/* ======================================================== */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+        height: auto;
+        margin-top: 4.5em;
+        overflow: hidden;
+    }
+
+    section > form > {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number,
+    section > form > #partial__form > .form__bloc > .form__date,
+    section > form > #partial__form >.form__bloc > .form__cvc,
+    section > form > #partial__form > .form__confirm {
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-mobile);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number {
+        width: 100vw;
+        margin-left: 6.5vw;
+    }
+
+    section > form > #partial__form > .form__name > div > input,
+    section > form > #partial__form > .form__number > div > input {
+        width: 83vw;
+        height: 3em;
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        margin: .5em 0 .5em 1.7em;
+        padding-left: 3vw;
+    }
+
+    section > form > #partial__form > .form__name > div > input::placeholder,
+    section > form > #partial__form > .form__number > div > input::placeholder {
+        color: rgb(158, 158, 158);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-mobile);
+    }
+
+    section > form > #partial__form > .form__bloc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date {
+        width: 55vw;
+        margin-top: .5em;
+        margin-left: 1.3em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc {
+        width: 33.8vw;
+        margin-top: .5em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        margin: .5em 0 .5em 0;
+        padding-left: 3vw;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input {
+        width: 22.5vw;
+        height: 3em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        width: 25.2vw;
+        height: 3em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input::placeholder,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input::placeholder {
+        color: rgb(158, 158, 158);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-mobile);
+    }
+
+    section > form > #partial__form > .form__confirm > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 86.5vw;
+        height: 7vh;
+        border: none;
+        border-radius: 7px;
+        font-family: var(--main-font-family);
+        font-size: 5vw;
+        color: white;
+        background-color: var(--background-button);
+        margin: 2vh auto 0 auto;
+    }
+
+    form > #confirm__bloc {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 55vh;
+        margin-top: -9vh;
+    }
+
+    section > form > #confirm__bloc > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > form > #confirm__bloc > div > svg {
+        width: 23vw;
+        height: 23vh;
+        margin-bottom: 10%;
+    }
+
+    form > #confirm__bloc > div > h2 {
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 8vw;
+        text-align: center;
+        margin: 0 auto 5vh auto;
+    }
+
+    form > #confirm__bloc > div > span {
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        font-size: 5vw;
+        margin: 0 12vw 0 12vw;
+        color: rgb(118, 118, 118);
+    }
+
+    form > #confirm__bloc > div > button {
+        width: 88vw;
+        height: 2em;
+        margin: 6vh 6vw 0 6vw;
+        border: none;
+        border-radius: 10px;
+        font-family: var(--main-font-family);
+        font-size: 5.5vw;
+        color: white;
+        background-color: var(--background-button);
+    }
+
+    form > #confirm__bloc > div > button > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer {
+        margin-top: 3.5vh;
+    }
+
+    .attribution {
+        font-family: var(--main-font-family);
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    .attribution a {
+        text-decoration: none;
+        color: var(--link-footer);
+    }
+}
+
+/* ============== Responsive design for tablet ============== */
+
+@media only screen and (min-width: 430px) and (max-width: 834px) {
+    
+    /* This is structure of display */
+
+    body {
+        position: fixed;
+        width: 100vw;
+        height: auto;
+        display: grid;
+        grid-template-areas: 
+            "head"
+            "bod"
+            "foot";
+    }
+
+    body > header {
+        grid-area: head;
+    }
+
+    body > section {
+        grid-area: bod;
+    }
+
+    body > footer {
+        grid-area: foot;
+    }
+
+    header {
+        height: 30vh;
+        background: cover no-repeat;
+        background-image: url(../../assets/images/bg-main-mobile.png);
+    }
+
+    /* This is credit-card display */
+
+    .front__card {
+        position: relative;
+        top: 16vh;
+        left: 9vw;
+        color: white;
+        z-index: 5;
+    }
+
+    .front__card > img {
+        width: 50vw;
+        height: 21vh;
+    }
+
+    .front__card > .logo__card {
+        position: absolute;
+        bottom: 10.5vh;
+        left: 3.5vw;
+    }
+
+    .front__card > .logo__card > svg {
+        width: 13vw;
+        height: 8vh;
+    }
+
+    .front__card > .number__card,
+    .front__card > .name__card,
+    .front__card > .date__card {
+        position: absolute;
+        font-family: var(--main-font-family);
+    }
+
+
+    .front__card > .number__card {
+        bottom: 8vh;
+        left: 5vw;
+        word-spacing: 1vw;
+        letter-spacing: .2px;
+        font-size: 3.2vw;
+    }
+
+    .front__card > .name__card {
+        bottom: 3vh;
+        left: 5vw;
+        font-size: 2vw;
+    }
+
+    .front__card > .date__card {
+        display: flex;
+        flex-direction: row;
+        bottom: 3vh;
+        right: 55.5vw;
+        font-size: 2vw;
+    }
+
+    .front__card > .date__card > div {
+        margin: 0 1vw;
+    }
+
+    .back__card {
+        position: relative;
+        bottom: 17.3vh;
+        left: 40vw;
+        color: white;
+        z-index: 1;
+    }
+
+    .back__card > img {
+        width: 50vw;
+        height: 21vh;
+    }
+
+    .back__card > .cvc__card {
+        position: absolute;
+        bottom: 10vh;
+        right: 55vw;
+        font-family: var(--main-font-family);
+        font-size: 2.5vw;
+    }
+
+    
+/* =========== This is for invalid and valid fields style =========== */
+
+    .error {
+        color: var(--error-color);
+        font-size: .9em;
+    }
+
+    .form__name > div > .error,
+    .form__number > div > .error {
+        width: 85%;
+        margin: 0 0 1em 1.8em;
+    }
+
+    .success {
+        color: rgb(0, 0, 0);
+        font-size: .6em;
+    }
+
+/* ======================================================== */
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: auto;
+        margin: 9em auto 0 auto;
+        overflow: hidden;
+    }
+
+    section > form > {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number,
+    section > form > #partial__form > .form__bloc > .form__date,
+    section > form > #partial__form >.form__bloc > .form__cvc,
+    section > form > #partial__form > .form__confirm {
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-tablet);
+        letter-spacing: .2em;
+        text-transform: uppercase;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number {
+        width: 75vw;
+        margin-left: 2.8vw;
+    }
+
+    section > form > #partial__form > .form__name > div > input,
+    section > form > #partial__form > .form__number > div > input {
+        width: 70vw;
+        height: 4em;
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        margin: .5em 0 .5em 1.7em;
+        padding-left: 3vw;
+    }
+
+    section > form > #partial__form > .form__name > div > input::placeholder,
+    section > form > #partial__form > .form__number > div > input::placeholder {
+        color: rgb(158, 158, 158);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-tablet);
+    }
+
+    section > form > #partial__form > .form__bloc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date {
+        width: 41.8vw;
+        margin: .5em 0 0 1.4em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc {
+        width: 33.8vw;
+        margin-top: .5em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        margin: .5em 0 .5em 0;
+        padding-left: 3vw;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input {
+        width: 16vw;
+        height: 4em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        width: 28vw;
+        height: 4em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input::placeholder,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input::placeholder {
+        color: rgb(158, 158, 158);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-tablet);
+    }
+
+    section > form > #partial__form > .form__confirm > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 73.5vw;
+        height: 7vh;
+        border: none;
+        border-radius: 7px;
+        font-family: var(--main-font-family);
+        font-size: 3vw;
+        color: white;
+        background-color: var(--background-button);
+        margin: 2vh 0 0 2.7vw;
+    }
+
+    form > #confirm__bloc {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 43vh;
+        margin-top: -2vh;
+    }
+
+    section > form > #confirm__bloc > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > form > #confirm__bloc > div > svg {
+        width: 15vw;
+        height: 15vh;
+        margin-bottom: 10%;
+    }
+
+    form > #confirm__bloc > div > h2 {
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 5vw;
+        margin: 0 auto 3vh auto;
+    }
+
+    form > #confirm__bloc > div > span {
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        font-size: 3vw;
+        color: rgb(118, 118, 118);
+    }
+
+    form > #confirm__bloc > div > button {
+        width: 65%;
+        height: 6vh;
+        margin: 5vh auto 0 auto;
+        border: none;
+        border-radius: 10px;
+        font-family: var(--main-font-family);
+        font-size: 3vw;
+        color: white;
+        background-color: var(--background-button);
+    }
+
+    form > #confirm__bloc > div > button > a {
+        text-decoration: none;
+        color: white;
+    }
+
+    footer {
+        margin-top: 8vh;
+    }
+
+    .attribution {
+        font-family: var(--main-font-family);
+        font-size: 3vw;
+        text-align: center;
+    }
+    
+    .attribution a {
+        text-decoration: none;
+        color: var(--link-footer);
+    }
+} 
+
+/* ============== Responsive design for desktop ============== */
+
+@media only screen and (min-width: 835px) { 
+
+    /* This is structure of display */
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas: 
+            "head bod"
+            "head bod"
+            "head foot";
+        overflow: hidden;
+    }
+
+    body > header {
+        grid-area: head;
+    }
+
+    body > section {
+        grid-area: bod;
+    }
+
+    body > footer {
+        grid-area: foot;
+    }
+
+    header {
+        background: url(../../assets/images/bg-main-desktop.png) no-repeat;
+        background-size: cover;
+    }
+
+    .front__card {
+        position: relative;
+        top: 25vh;
+        left: 8vw;
+        color: white;
+        z-index: 5;
+    }
+
+    .front__card > img {
+        width: 23vw;
+        height: 25vh;
+    }
+
+    .front__card > .logo__card {
+        position: absolute;
+        bottom: 15vh;
+        left: .5vw;
+    }
+
+    .front__card > .logo__card > svg {
+        width: 5vw;
+        height: 8vh;
+    }
+
+    .front__card > .number__card,
+    .front__card > .name__card,
+    .front__card > .date__card {
+        position: absolute;
+        font-family: var(--main-font-family);
+    }
+
+
+    .front__card > .number__card {
+        bottom: 8vh;
+        left: 2vw;
+        width: 100vw;
+        word-spacing: 1.2vw;
+        font-size: 1.4vw;
+    }
+
+    .front__card > .name__card {
+        bottom: 3vh;
+        left: 2vw;
+        font-size: .8vw;
+    }
+
+    .front__card > .date__card {
+        display: flex;
+        flex-direction: row;
+        bottom: 3vh;
+        left: 18.5vw;
+        font-size: .8vw;
+    }
+
+    .back__card {
+        position: relative;
+        top: 28vh;
+        left: 11vw;
+        color: white;
+        z-index: 1;
+    }
+
+    .back__card > img {
+        width: 23vw;
+        height: 25vh;
+    }
+
+    .back__card > .cvc__card {
+        position: absolute;
+        bottom: 11.9vh;
+        right: 2.5vw;
+        font-family: var(--main-font-family);
+        font-size: .9vw;
+    }
+ 
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 77vw;
+        height: 95vh;
+    }
+
+/* =========== This is for invalid and valid fields style =========== */
+
+.error {
+    color: var(--error-color);
+    font-size: .9em;
+}
+
+.form__name > div > .error,
+.form__number > div > .error,
+.form__cvc > div > .error {
+    width: 85%;
+    margin: .5em 0 1em 0;
+}
+
+.success > div > input{
+    border: green;
+    font-size: .6em;
+}
+
+/* ======================================================== */
+
+    section > form {
+        width: 25vw;
+        height: 46.5vh;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number,
+    section > form > #partial__form > .form__bloc > .form__date,
+    section > form > #partial__form > .form__bloc > .form__cvc,
+    section > form > #partial__form > .form__confirm {
+        display: flex;
+        flex-direction: column;
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        font-size: var(--main-font-size-desktop);
+        font-weight: var(--font-bold);
+        text-transform: uppercase;
+    }
+
+    section > form > #partial__form > .form__name,
+    section > form > #partial__form > .form__number {
+        width: 30vw;
+        margin-bottom: 1vh;
+    }
+
+    section > form > #partial__form > .form__name > div > input,
+    section > form > #partial__form > .form__number > div > input {
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        padding-left: 1vw;
+        margin-top: 1vh;
+    }
+
+    section > form > #partial__form > .form__name > div > input {
+        width: 23.8vw;
+        height: 5.5vh;
+    }
+
+    section > form > #partial__form > .form__number > div > input {
+        width: 23.8vw;
+        height: 5.5vh;
+    }
+
+    section > form > #partial__form > .form__name > div > input::placeholder,
+    section > form > #partial__form > .form__number > div > input::placeholder {
+        color: rgb(156, 156, 156);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-desktop);
+    }
+
+    section > form > #partial__form > .form__bloc {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date {
+        width: 18vw;
+        height: 13vh;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: .5em 1em;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc {
+        width: 20vw;
+        height: 13vh;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        border: 1px solid rgb(120, 120, 120);
+        border-radius: 7px;
+        margin-top: 1vh;
+        padding-left: 1vw;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input {
+        min-width: 3vw;
+        max-width: 3vw;
+        height: 5.5vh;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input {
+        min-width: 12vw;
+        max-width: 12vw;
+        height: 5.5vh;
+    }
+
+    section > form > #partial__form > .form__bloc > .form__date > div > input::placeholder,
+    section > form > #partial__form > .form__bloc > .form__cvc > div > input::placeholder {
+        color: rgb(156, 156, 156);
+        font-family: var(--main-font-family);
+        font-weight: var(--font-bold);
+        font-size: var(--main-font-size-desktop);
+    }
+
+    section > form > #partial__form > .form__confirm > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        height: 7vh;
+        border: none;
+        border-radius: 7px;
+        font-family: var(--main-font-family);
+        font-size: var(--main-font-size-desktop);
+        color: white;
+        background-color: var(--background-button);
+        margin-top: 1vh;
+    }
+
+    section > form > #confirm__bloc {
+        display: none;
+    }
+
+    section > form > #confirm__bloc > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > form > #confirm__bloc > div > svg {
+        margin-bottom: 10%;
+    }
+
+    section > form > #confirm__bloc > div > h2 {
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2vw;
+        margin-bottom: 3vh;
+    }
+
+    section > form > #confirm__bloc > div > span {
+        width: 75%;
+        font-family: var(--main-font-family);
+        font-weight: bolder;
+        font-size: 1vw;
+        text-align: center;
+        color: rgb(118, 118, 118);
+    }
+
+    section > form > #confirm__bloc > div > button {
+        width: 25vw;
+        height: 7vh;
+        margin-top: 8vh;
+        border: none;
+        border-radius: 7px;
+        background-color: var(--background-button);
+    }
+
+    form > #confirm__bloc > div > button > a {
+        font-family: var(--main-font-family);
+        font-size: 1.2vw;
+        text-decoration: none;
+        color: white;
+    }
+
+    footer {
+        width: 77vw;
+        height: 5vh;
+    }
+
+    .attribution {
+        font-family: var(--main-font-family);
+        font-size: 1vw;
+        text-align: center;
+    }
+    
+    .attribution a {
+        text-decoration: none;
+        color: var(--link-footer);
+    }
+}
