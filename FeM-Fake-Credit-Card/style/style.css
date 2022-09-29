@@ -43,7 +43,7 @@
     header {
         height: 30vh;
         background: no-repeat;
-        background-image: url(../../images/bg-main-mobile.png);
+        background-image: url(../images/bg-main-mobile.png);
     }
 
     /* This is credit-card display */
@@ -365,7 +365,7 @@
     header {
         height: 30vh;
         background: cover no-repeat;
-        background-image: url(../../images/bg-main-mobile.png);
+        background-image: url(../images/bg-main-mobile.png);
     }
 
     /* This is credit-card display */
