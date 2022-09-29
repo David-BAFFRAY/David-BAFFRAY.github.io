@@ -1,6 +1,6 @@
 body {
     width: 100vw;
-    height: auto;
+    height: 75%;
     background: rgb(25,29,30);
     background: linear-gradient(0deg, rgba(25,29,30,1) 0%, rgba(60,74,87,1) 100%);
     display: grid;
@@ -49,9 +49,9 @@ body > footer {
 
     ul > li > a {
         font-family: Lobster;
-        font-size: 2em;
+        font-size: 2.4em;
         font-weight: bolder;
-        -webkit-text-stroke: .1px white;
+        -webkit-text-stroke: .3px white;
         letter-spacing: .05em;
         text-decoration: none;
         color: black;

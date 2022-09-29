@@ -2,9 +2,9 @@
 
 :root {
     --main-font-family: Space Grotesk;
-    --main-font-size-mobile: 3vw;
-    --main-font-size-tablet: 2vw;
-    --main-font-size-desktop: 1vw;
+    --main-font-size-mobile: .8em;
+    --main-font-size-tablet: 1.2em;
+    --main-font-size-desktop: 1.2em;
     --font-bold: 700;
     --error-color: red;
     --background-button: rgb(34,8,48);
@@ -18,8 +18,7 @@
     /* This is structure of display */
 
     body {
-        position: fixed;
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: grid;
         grid-template-areas: 
@@ -41,7 +40,7 @@
     }
 
     header {
-        height: 30vh;
+        height: 75%;
         background: no-repeat;
         background-image: url(../images/bg-main-mobile.png);
     }
@@ -50,26 +49,26 @@
 
     .front__card {
         position: relative;
-        top: 16vh;
-        left: 6vw;
+        top: 7em;
+        left: 2em;
         color: white;
         z-index: 5;
     }
 
     .front__card > img {
-        width: 70vw;
-        height: 21vh;
+        width: 17em;
+        height: 9em;
     }
 
     .front__card > .logo__card {
         position: absolute;
-        bottom: 10.5vh;
-        left: 3.5vw;
+        bottom: 4em;
+        left: 1em;
     }
 
     .front__card > .logo__card > svg {
-        width: 15vw;
-        height: 10vh;
+        width: 4em;
+        height: 4em;
     }
 
     .front__card > .number__card,
@@ -81,50 +80,50 @@
 
 
     .front__card > .number__card {
-        bottom: 8vh;
-        left: 5vw;
-        word-spacing: 1vw;
+        bottom: 2.5em;
+        left: 1em;
+        word-spacing: .2em;
         letter-spacing: .2px;
-        font-size: 5vw;
+        font-size: 1.23em;
     }
 
     .front__card > .name__card {
-        bottom: 3vh;
-        left: 5vw;
-        font-size: 3vw;
+        bottom: 1.5em;
+        left: 1.6em;
+        font-size: .8em;
     }
 
     .front__card > .date__card {
         display: flex;
         flex-direction: row;
-        bottom: 3vh;
-        right: 35vw;
-        font-size: 3vw;
+        bottom: 1.6em;
+        right: 12.3em;
+        font-size: .7em;
     }
 
     .front__card > .date__card > div {
-        margin: 0 1vw;
+        margin: 0 .5em;
     }
 
     .back__card {
         position: relative;
-        bottom: 17.3vh;
-        left: 19vw;
+        bottom: 7.3em;
+        left: 5em;
         color: white;
         z-index: 1;
     }
 
     .back__card > img {
-        width: 70vw;
-        height: 21vh;
+        width: 17em;
+        height: 9em;
     }
 
     .back__card > .cvc__card {
         position: absolute;
-        bottom: 10vh;
-        right: 37.5vw;
+        bottom: 4.8em;
+        right: 10.3em;
         font-family: var(--main-font-family);
-        font-size: 4vw;
+        font-size: .9em;
     }
 
     
@@ -152,9 +151,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         height: auto;
-        margin-top: 4.5em;
         overflow: hidden;
     }
 
@@ -179,18 +177,18 @@
 
     section > form > #partial__form > .form__name,
     section > form > #partial__form > .form__number {
-        width: 100vw;
-        margin-left: 6.5vw;
+        width: 100%;
+        margin-left: 2em;
     }
 
     section > form > #partial__form > .form__name > div > input,
     section > form > #partial__form > .form__number > div > input {
-        width: 83vw;
+        width: 83%;
         height: 3em;
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
         margin: .5em 0 .5em 1.7em;
-        padding-left: 3vw;
+        padding-left: 1em;
     }
 
     section > form > #partial__form > .form__name > div > input::placeholder,
@@ -209,13 +207,13 @@
     }
 
     section > form > #partial__form > .form__bloc > .form__date {
-        width: 55vw;
+        width: 55%;
         margin-top: .5em;
         margin-left: 1.3em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc {
-        width: 33.8vw;
+        width: 33.8%;
         margin-top: .5em;
     }
 
@@ -224,16 +222,16 @@
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
         margin: .5em 0 .5em 0;
-        padding-left: 3vw;
+        padding-left: .5em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div > input {
-        width: 22.5vw;
+        width: 40%;
         height: 3em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc > div > input {
-        width: 25.2vw;
+        width: 79%;
         height: 3em;
     }
 
@@ -249,15 +247,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 86.5vw;
-        height: 7vh;
+        width: 86.5%;
+        height: 2.5em;
         border: none;
         border-radius: 7px;
         font-family: var(--main-font-family);
-        font-size: 5vw;
+        font-size: 1.8em;
         color: white;
         background-color: var(--background-button);
-        margin: 2vh auto 0 auto;
+        margin: .3em auto 0 auto;
     }
 
     form > #confirm__bloc {
@@ -265,9 +263,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 55vh;
-        margin-top: -9vh;
+        width: 100%;
+        height: 19em;
     }
 
     section > form > #confirm__bloc > div {
@@ -278,36 +275,35 @@
     }
 
     section > form > #confirm__bloc > div > svg {
-        width: 23vw;
-        height: 23vh;
-        margin-bottom: 10%;
+        width: 72px;
+        height: 72px;
+        margin-bottom: 1em;
     }
 
     form > #confirm__bloc > div > h2 {
         font-family: var(--main-font-family);
         font-weight: bolder;
         text-transform: uppercase;
-        font-size: 8vw;
+        font-size: 2em;
         text-align: center;
-        margin: 0 auto 5vh auto;
+        margin: 0 auto 1em auto;
     }
 
     form > #confirm__bloc > div > span {
         font-family: var(--main-font-family);
         font-weight: bolder;
-        font-size: 5vw;
-        margin: 0 12vw 0 12vw;
+        font-size: 1em;
         color: rgb(118, 118, 118);
     }
 
     form > #confirm__bloc > div > button {
-        width: 88vw;
+        width: 88%;
         height: 3em;
-        margin: 6vh 6vw 0 6vw;
+        margin-top: 1.5em;
         border: none;
         border-radius: 10px;
         font-family: var(--main-font-family);
-        font-size: 5.5vw;
+        font-size: 1.5em;
         color: white;
         background-color: var(--background-button);
     }
@@ -318,12 +314,12 @@
     }
 
     footer {
-        margin-top: 3.5vh;
+        margin-top: 1em;
     }
 
     .attribution {
         font-family: var(--main-font-family);
-        font-size: 4vw;
+        font-size: 1em;
         text-align: center;
     }
     
@@ -340,8 +336,7 @@
     /* This is structure of display */
 
     body {
-        position: fixed;
-        width: 100vw;
+        width: 100%;
         height: auto;
         display: grid;
         grid-template-areas: 
@@ -363,7 +358,7 @@
     }
 
     header {
-        height: 30vh;
+        height: 70%;
         background: cover no-repeat;
         background-image: url(../images/bg-main-mobile.png);
     }
@@ -372,26 +367,26 @@
 
     .front__card {
         position: relative;
-        top: 16vh;
-        left: 9vw;
+        top: 12em;
+        left: 5em;
         color: white;
         z-index: 5;
     }
 
     .front__card > img {
-        width: 50vw;
-        height: 21vh;
+        width: 26em;
+        height: 15em;
     }
 
     .front__card > .logo__card {
         position: absolute;
-        bottom: 10.5vh;
-        left: 3.5vw;
+        bottom: 7.5em;
+        left: 1em;
     }
 
     .front__card > .logo__card > svg {
-        width: 13vw;
-        height: 8vh;
+        width: 6em;
+        height: 6em;
     }
 
     .front__card > .number__card,
@@ -403,42 +398,42 @@
 
 
     .front__card > .number__card {
-        bottom: 8vh;
-        left: 5vw;
-        word-spacing: 1vw;
+        bottom: 3.5em;
+        left: 2em;
+        word-spacing: .3em;
         letter-spacing: .2px;
-        font-size: 3.2vw;
+        font-size: 1.6em;
     }
 
     .front__card > .name__card {
-        bottom: 3vh;
-        left: 5vw;
-        font-size: 2vw;
+        bottom: 2em;
+        left: 2.8em;
+        font-size: 1.1em;
     }
 
     .front__card > .date__card {
         display: flex;
         flex-direction: row;
-        bottom: 3vh;
-        right: 55.5vw;
-        font-size: 2vw;
+        bottom: 1.9em;
+        right: 24.6em;
+        font-size: 1.1em;
     }
 
     .front__card > .date__card > div {
-        margin: 0 1vw;
+        margin: 0 .5em;
     }
 
     .back__card {
         position: relative;
-        bottom: 17.3vh;
-        left: 40vw;
+        bottom: 12em;
+        left: 19em;
         color: white;
         z-index: 1;
     }
 
     .back__card > img {
-        width: 50vw;
-        height: 21vh;
+        width: 26em;
+        height: 15em;
     }
 
     .back__card > .cvc__card {
@@ -475,10 +470,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
+        width: 100%;
         height: auto;
-        margin: 9em auto 0 auto;
-        overflow: hidden;
     }
 
     section > form > {
@@ -502,18 +495,17 @@
 
     section > form > #partial__form > .form__name,
     section > form > #partial__form > .form__number {
-        width: 75vw;
-        margin-left: 2.8vw;
+        width: 75%;
     }
 
     section > form > #partial__form > .form__name > div > input,
     section > form > #partial__form > .form__number > div > input {
-        width: 70vw;
+        width: 97%;
         height: 4em;
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
-        margin: .5em 0 .5em 1.7em;
-        padding-left: 3vw;
+        margin: .5em 0 .5em 0;
+        padding-left: 1em;
     }
 
     section > form > #partial__form > .form__name > div > input::placeholder,
@@ -532,12 +524,12 @@
     }
 
     section > form > #partial__form > .form__bloc > .form__date {
-        width: 41.8vw;
-        margin: .5em 0 0 1.4em;
+        width: 75%;
+        margin-top: .5em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc {
-        width: 33.8vw;
+        width: 60%;
         margin-top: .5em;
     }
 
@@ -546,16 +538,16 @@
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
         margin: .5em 0 .5em 0;
-        padding-left: 3vw;
+        padding-left: 1em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div > input {
-        width: 16vw;
+        width: 40%;
         height: 4em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc > div > input {
-        width: 28vw;
+        width: 93%;
         height: 4em;
     }
 
@@ -571,15 +563,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 73.5vw;
-        height: 7vh;
+        width: 70vw;
+        height: 3em;
         border: none;
         border-radius: 7px;
         font-family: var(--main-font-family);
-        font-size: 3vw;
+        font-size: 1.5em;
         color: white;
         background-color: var(--background-button);
-        margin: 2vh 0 0 2.7vw;
+        margin-top: 2em;
     }
 
     form > #confirm__bloc {
@@ -587,9 +579,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100vw;
-        height: 43vh;
-        margin-top: -2vh;
+        width: 100%;
+        height: 50%;
     }
 
     section > form > #confirm__bloc > div {
@@ -600,34 +591,34 @@
     }
 
     section > form > #confirm__bloc > div > svg {
-        width: 15vw;
-        height: 15vh;
-        margin-bottom: 10%;
+        width: 96px;
+        height: 96px;
+        margin-bottom: 4em;
     }
 
     form > #confirm__bloc > div > h2 {
         font-family: var(--main-font-family);
         font-weight: bolder;
         text-transform: uppercase;
-        font-size: 5vw;
-        margin: 0 auto 3vh auto;
+        font-size: 3em;
+        margin: 0 auto 1em auto;
     }
 
     form > #confirm__bloc > div > span {
         font-family: var(--main-font-family);
         font-weight: bolder;
-        font-size: 3vw;
+        font-size: 1.5em;
         color: rgb(118, 118, 118);
     }
 
     form > #confirm__bloc > div > button {
-        width: 65%;
-        height: 6vh;
-        margin: 5vh auto 0 auto;
+        width: 100%;
+        height: 3em;
+        margin: 3em auto 0 auto;
         border: none;
         border-radius: 10px;
         font-family: var(--main-font-family);
-        font-size: 3vw;
+        font-size: 1.5em;
         color: white;
         background-color: var(--background-button);
     }
@@ -638,12 +629,12 @@
     }
 
     footer {
-        margin-top: 8vh;
+        margin-top: 8em;
     }
 
     .attribution {
         font-family: var(--main-font-family);
-        font-size: 3vw;
+        font-size: 1.5em;
         text-align: center;
     }
     
@@ -660,14 +651,13 @@
     /* This is structure of display */
 
     body {
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
         display: grid;
         grid-template-areas: 
             "head bod"
             "head bod"
             "head foot";
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     body > header {
@@ -689,26 +679,26 @@
 
     .front__card {
         position: relative;
-        top: 25vh;
-        left: 8vw;
+        top: 13em;
+        left: 9em;
         color: white;
         z-index: 5;
     }
 
     .front__card > img {
-        width: 23vw;
-        height: 25vh;
+        width: 28em;
+        height: 15em;
     }
 
     .front__card > .logo__card {
         position: absolute;
-        bottom: 15vh;
-        left: .5vw;
+        bottom: 8.5em;
+        left: 1em;
     }
 
     .front__card > .logo__card > svg {
-        width: 5vw;
-        height: 8vh;
+        width: 86px;
+        height: 86px;
     }
 
     .front__card > .number__card,
@@ -720,46 +710,45 @@
 
 
     .front__card > .number__card {
-        bottom: 8vh;
-        left: 2vw;
-        width: 100vw;
-        word-spacing: 1.2vw;
-        font-size: 1.4vw;
+        bottom: 3em;
+        left: 1.3em;
+        word-spacing: .9em;
+        font-size: 1.7em;
     }
 
     .front__card > .name__card {
-        bottom: 3vh;
-        left: 2vw;
-        font-size: .8vw;
+        bottom: 2em;
+        left: 2.5em;
+        font-size: .9em;
     }
 
     .front__card > .date__card {
         display: flex;
         flex-direction: row;
-        bottom: 3vh;
-        left: 18.5vw;
-        font-size: .8vw;
+        bottom: 2em;
+        left: 25.2em;
+        font-size: .9em;
     }
 
     .back__card {
         position: relative;
-        top: 28vh;
-        left: 11vw;
+        top: 15em;
+        left: 15em;
         color: white;
         z-index: 1;
     }
 
     .back__card > img {
-        width: 23vw;
-        height: 25vh;
+        width: 28em;
+        height: 15em;
     }
 
     .back__card > .cvc__card {
         position: absolute;
-        bottom: 11.9vh;
-        right: 2.5vw;
+        bottom: 6em;
+        right: 2.7em;
         font-family: var(--main-font-family);
-        font-size: .9vw;
+        font-size: 1.2em;
     }
  
     section {
@@ -767,7 +756,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 77vw;
+        width: 100%;
         height: 95vh;
     }
 
@@ -793,8 +782,8 @@
 /* ======================================================== */
 
     section > form {
-        width: 25vw;
-        height: 46.5vh;
+        width: 32.5%;
+        height: 50%;
     }
 
     section > form > #partial__form > .form__name,
@@ -813,26 +802,26 @@
 
     section > form > #partial__form > .form__name,
     section > form > #partial__form > .form__number {
-        width: 30vw;
-        margin-bottom: 1vh;
+        width: 50%;
+        margin-bottom: .5em;
     }
 
     section > form > #partial__form > .form__name > div > input,
     section > form > #partial__form > .form__number > div > input {
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
-        padding-left: 1vw;
-        margin-top: 1vh;
+        padding-left: 1em;
+        margin-top: 1em;
     }
 
     section > form > #partial__form > .form__name > div > input {
-        width: 23.8vw;
-        height: 5.5vh;
+        width: 34.7em;
+        height: 4em;
     }
 
     section > form > #partial__form > .form__number > div > input {
-        width: 23.8vw;
-        height: 5.5vh;
+        width: 34.7em;
+        height: 4em;
     }
 
     section > form > #partial__form > .form__name > div > input::placeholder,
@@ -851,40 +840,40 @@
     }
 
     section > form > #partial__form > .form__bloc > .form__date {
-        width: 18vw;
-        height: 13vh;
+        width: 53.7%;
+        height: 6.3em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: .5em 1em;
+        gap: .5em .5em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc {
-        width: 20vw;
-        height: 13vh;
+        width: 46%;
+        height: 6.3em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div > input,
     section > form > #partial__form > .form__bloc > .form__cvc > div > input {
         border: 1px solid rgb(120, 120, 120);
         border-radius: 7px;
-        margin-top: 1vh;
-        padding-left: 1vw;
+        margin-top: 1em;
+        padding-left: 1em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div > input {
-        min-width: 3vw;
-        max-width: 3vw;
-        height: 5.5vh;
+        min-width: 7.5em;
+        max-width: 7.5em;
+        height: 4em;
     }
 
     section > form > #partial__form > .form__bloc > .form__cvc > div > input {
-        min-width: 12vw;
-        max-width: 12vw;
-        height: 5.5vh;
+        min-width: 15.3em;
+        max-width: 15.3em;
+        height: 4em;
     }
 
     section > form > #partial__form > .form__bloc > .form__date > div > input::placeholder,
@@ -899,15 +888,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 25vw;
-        height: 7vh;
+        width: 100%;
+        height: 3.5em;
         border: none;
         border-radius: 7px;
         font-family: var(--main-font-family);
         font-size: var(--main-font-size-desktop);
         color: white;
         background-color: var(--background-button);
-        margin-top: 1vh;
+        margin-top: 1em;
     }
 
     section > form > #confirm__bloc {
@@ -922,7 +911,7 @@
     }
 
     section > form > #confirm__bloc > div > svg {
-        margin-bottom: 10%;
+        margin-bottom: 3em;
     }
 
     section > form > #confirm__bloc > div > h2 {
@@ -930,23 +919,23 @@
         font-weight: bolder;
         text-transform: uppercase;
         text-align: center;
-        font-size: 2vw;
-        margin-bottom: 3vh;
+        font-size: 2.5em;
+        margin-bottom: 1em;
     }
 
     section > form > #confirm__bloc > div > span {
         width: 75%;
         font-family: var(--main-font-family);
         font-weight: bolder;
-        font-size: 1vw;
+        font-size: 1.3em;
         text-align: center;
         color: rgb(118, 118, 118);
     }
 
     section > form > #confirm__bloc > div > button {
-        width: 25vw;
-        height: 7vh;
-        margin-top: 8vh;
+        width: 100%;
+        height: 5em;
+        margin-top: 4em;
         border: none;
         border-radius: 7px;
         background-color: var(--background-button);
@@ -954,19 +943,19 @@
 
     form > #confirm__bloc > div > button > a {
         font-family: var(--main-font-family);
-        font-size: 1.2vw;
+        font-size: 2em;
         text-decoration: none;
         color: white;
     }
 
     footer {
         width: 77vw;
-        height: 5vh;
+        height: 5em;
     }
 
     .attribution {
         font-family: var(--main-font-family);
-        font-size: 1vw;
+        font-size: 1.3em;
         text-align: center;
     }
     
