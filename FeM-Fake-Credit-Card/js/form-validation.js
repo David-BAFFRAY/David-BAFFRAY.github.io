@@ -1,5 +1,3 @@
-console.log('form validation chargé');
-
 const form = document.getElementById('form');
 const cardName = document.getElementById('name');
 const cardNumber = document.getElementById('cardNumber');
