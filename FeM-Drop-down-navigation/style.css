@@ -136,7 +136,7 @@
   section .img {
     width: 100vw;
     height: 45vh;
-    background-image: url("image-hero-mobile.4c761148.png");
+    background-image: url("image-hero-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -335,7 +335,7 @@
   section .img {
     width: 100vw;
     height: 100vh;
-    background-image: url("image-hero-mobile.4c761148.png");
+    background-image: url("image-hero-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin: 10vh 0 0 26vw;
@@ -541,7 +541,7 @@
   section .img {
     width: 100vw;
     height: 63vh;
-    background-image: url("image-hero-mobile.4c761148.png");
+    background-image: url("image-hero-mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -783,7 +783,7 @@
   section .img {
     width: 31.3vw;
     height: 67vh;
-    background-image: url("image-hero-desktop.03fcb46b.png");
+    background-image: url("image-hero-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 6em 0 0;
@@ -1035,7 +1035,7 @@
   section .img {
     width: 28%;
     height: 77vh;
-    background-image: url("image-hero-desktop.03fcb46b.png");
+    background-image: url("image-hero-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 6em 0 0;
