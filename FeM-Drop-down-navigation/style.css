@@ -1,10 +1,11 @@
 @media only screen and (max-width: 484px) and (orientation: portrait) {
   body {
+    width: 100vw;
     height: auto;
-    grid-template: "header" 10vh
+    grid-template-rows: 10vh auto 10vh;
+    grid-template: "header"
                    "section"
-                   "footer" 10vh
-                   / 100vw;
+                   "footer";
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -198,11 +199,12 @@
 
 @media only screen and (max-width: 929px) and (orientation: landscape) {
   body {
+    width: 100vw;
     height: auto;
-    grid-template: "header" 10vh
+    grid-template-rows: 10vh auto 10vh;
+    grid-template: "header"
                    "section"
-                   "footer" 10vh
-                   / 100vw;
+                   "footer";
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -397,11 +399,12 @@
 
 @media only screen and (min-width: 485px) and (max-width: 834px) and (orientation: portrait) {
   body {
+    width: 100vw;
     height: auto;
-    grid-template: "header" 10vh
+    grid-template-rows: 10vh auto 10vh;
+    grid-template: "header"
                    "section"
-                   "footer" 10vh
-                   / 100vw;
+                   "footer";
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -601,11 +604,12 @@
 
 @media only screen and (min-width: 835px) and (max-width: 1280px) and (orientation: landscape) {
   body {
+    width: 100vw;
     height: 100vh;
-    grid-template: "header" 10vh
+    grid-template-rows: 10vh auto 10vh;
+    grid-template: "header"
                    "section"
-                   "footer"
-                   / 100vw;
+                   "footer";
     display: grid;
     overflow-x: hidden;
   }
@@ -1103,7 +1107,7 @@
   }
 }
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+/* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -1140,4 +1144,4 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
+} */
