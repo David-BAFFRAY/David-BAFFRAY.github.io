@@ -1,11 +1,10 @@
 @media only screen and (max-width: 484px) and (orientation: portrait) {
   body {
-    width: 100vw;
     height: auto;
-    grid-template-rows: 10vh auto 10vh;
-    grid-template: "header"
+    grid-template: "header" 10vh
                    "section"
-                   "footer";
+                   "footer" 10vh
+                   / 100vw;
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -136,7 +135,7 @@
   section .img {
     width: 100vw;
     height: 45vh;
-    background-image: url("image-hero-mobile.png");
+    background-image: url("image-hero-mobile.eadc0620.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -199,12 +198,11 @@
 
 @media only screen and (max-width: 929px) and (orientation: landscape) {
   body {
-    width: 100vw;
     height: auto;
-    grid-template-rows: 10vh auto 10vh;
-    grid-template: "header"
+    grid-template: "header" 10vh
                    "section"
-                   "footer";
+                   "footer" 10vh
+                   / 100vw;
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -335,7 +333,7 @@
   section .img {
     width: 100vw;
     height: 100vh;
-    background-image: url("image-hero-mobile.png");
+    background-image: url("image-hero-mobile.eadc0620.png");
     background-repeat: no-repeat;
     background-size: contain;
     margin: 10vh 0 0 26vw;
@@ -399,12 +397,11 @@
 
 @media only screen and (min-width: 485px) and (max-width: 834px) and (orientation: portrait) {
   body {
-    width: 100vw;
     height: auto;
-    grid-template-rows: 10vh auto 10vh;
-    grid-template: "header"
+    grid-template: "header" 10vh
                    "section"
-                   "footer";
+                   "footer" 10vh
+                   / 100vw;
     transition: all .3s;
     display: grid;
     overflow-x: hidden;
@@ -541,7 +538,7 @@
   section .img {
     width: 100vw;
     height: 63vh;
-    background-image: url("image-hero-mobile.png");
+    background-image: url("image-hero-mobile.eadc0620.png");
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -604,12 +601,11 @@
 
 @media only screen and (min-width: 835px) and (max-width: 1280px) and (orientation: landscape) {
   body {
-    width: 100vw;
     height: 100vh;
-    grid-template-rows: 10vh auto 10vh;
-    grid-template: "header"
+    grid-template: "header" 10vh
                    "section"
-                   "footer";
+                   "footer"
+                   / 100vw;
     display: grid;
     overflow-x: hidden;
   }
@@ -783,7 +779,7 @@
   section .img {
     width: 31.3vw;
     height: 67vh;
-    background-image: url("image-hero-desktop.png");
+    background-image: url("image-hero-desktop.3ffc5101.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 6em 0 0;
@@ -1035,7 +1031,7 @@
   section .img {
     width: 28%;
     height: 77vh;
-    background-image: url("image-hero-desktop.png");
+    background-image: url("image-hero-desktop.3ffc5101.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 6em 0 0;
@@ -1107,7 +1103,7 @@
   }
 }
 
-/* html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, menu, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, main, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -1144,4 +1140,5 @@ blockquote:before, blockquote:after, q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-} */
+}
+
