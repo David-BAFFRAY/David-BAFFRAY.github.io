@@ -4,10 +4,6 @@ body {
     background: rgb(25,29,30);
     background: linear-gradient(0deg, rgba(25,29,30,1) 0%, rgba(60,74,87,1) 100%);
     display: grid;
-    grid-template-areas: 
-        "head"
-        "bod"
-        "foot";
 }
 
 body > header {
@@ -26,6 +22,13 @@ body > footer {
 
 @media only screen and (max-width: 429px) {
 
+    body {
+        grid-template-areas: 
+            "head"
+            "bod"
+            "foot";
+    }
+
     header {
         width: 100%;
         height: 8vh;
@@ -37,49 +40,148 @@ body > footer {
     }
 
     ul {
+        width: 80vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        border: 3px solid #FFF;
+        border-radius: 25px;
     }
 
     ul > li {
         margin: 2em 0 2em 0;
+        line-height: 4vh;
     }
 
     ul > li > a {
-        font-family: Lobster;
-        font-size: 2.4em;
+        font-family: Silkscreen;
+        font-size: 3.5vw;
         font-weight: bolder;
-        -webkit-text-stroke: .3px white;
-        -webkit-text-stroke: .8px white;
-        letter-spacing: .08em;
+        letter-spacing: .05em;
         text-decoration: none;
-        color: black;
+        text-align: center;
+        margin: auto;
+        color: white;
     }
 
     footer {
-        width: 100%;
-        height: 17vh;
+        height: 100vh;
+        margin: auto 0;
+    }
+
+    footer > nav {
         display: flex;
         flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    footer > nav > a {
+        margin: 1em 1em 1em .5em;
+        padding: .5em 0 .5em 0;
+    }
+
+    footer > nav > a > svg {
+        width: 10vw;
+        height: 10vh;
+        border-radius: 0 0 45% 45%;
+        transition: transform .4s linear, box-shadow .4s ease-in-out;
+    }
+
+    footer > nav > a > svg:hover {
+        transform: scale(1.3);
+        transform: rotateX(30deg);
+        box-shadow: 0px 12px 10px -7px rgba(65, 65, 65, 0.5);
+
+    }
+}
+
+/* ============== Responsive design for landscape mobile ============== */
+
+@media screen and (min-width: 320px) and (max-width: 926px) and (orientation: landscape) {
+    body {
+        grid-template-areas: 
+        "foot head"
+        "foot bod"
+        "foot bod";
+    }
+
+    header {
+        width: 90vw;
+    }
+
+    main {
+        width: 90vw;
+        height: auto;
+    }
+
+    ul {
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        border: 3px solid #FFF;
+        border-radius: 25px;
     }
 
-    footer > a {
-        margin: 0 1.5em 2em 1.5em;
+    ul > li {
+        margin: 2em 0 2em 0;
+        line-height: 4vh;
     }
 
-    footer > a > svg {
-        width: 34px;
-        height: 34px;
+    ul > li > a {
+        font-family: Silkscreen;
+        font-size: 2.5vw;
+        font-weight: bolder;
+        letter-spacing: .05em;
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        color: white;
+    }
+
+    footer {
+        height: 100vh;
+        margin: auto 0;
+    }
+
+    footer > nav {
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 10em;
+    }
+
+    footer > nav > a {
+        margin: 1em 1em 1em .5em;
+        padding: .5em 0 .5em 0;
+    }
+
+    footer > nav > a > svg {
+        width: 9vw;
+        height: 9vh;
+        border-radius: 0 0 45% 45%;
     }
 }
 
 /* ============== Responsive design for tablet ============== */
 
 @media only screen and (min-width: 430px) and (max-width: 834px) {
+
+    body {
+        grid-template-areas: 
+        "head"
+        "bod"
+        "foot";
+    }
+
     header {
         width: 100%;
         height: 12.5vh;
@@ -91,103 +193,132 @@ body > footer {
     }
 
     ul {
+        width: 75vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        border: 3px solid #FFF;
+        border-radius: 25px;
     }
 
     ul > li {
         margin: 2em 0 2em 0;
+        line-height: 4vh;
     }
 
     ul > li > a {
-        font-family: Lobster;
-        font-size: 3.5em;
+        font-family: Silkscreen;
+        font-size: 3vw;
         font-weight: bolder;
-        -webkit-text-stroke: .1px white;
         letter-spacing: .05em;
         text-decoration: none;
-        color: black;
+        text-align: center;
+        margin: auto;
+        color: white;
     }
 
     footer {
-        width: 100%;
-        height: 12.5vh;
+        height: 100vh;
+        margin: auto 0;
+    }
+
+    footer > nav {
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-evenly;
     }
 
-    footer > a {
-        margin: 0 1.5em 2em 1.5em;
+    footer > nav > a {
+        margin: 1em 1em 1em .5em;
+        padding: .5em 0 .5em 0;
     }
 
-    footer > a > svg {
+    footer > nav > a > svg {
         width: 50px;
         height: 50px;
+        border-radius: 0 0 45% 45%;
     }
 }
 
 /* ============== Responsive design for desktop ============== */
 
 @media only screen and (min-width: 835px) {
+
+    body {
+        grid-template-areas: 
+        "foot head"
+        "foot bod"
+        "foot bod";
+    }
+
     header {
-        width: 100vw;
+        width: 90vw;
         height: 12.5vh;
     }
 
     main {
-        width: 100vw;
+        width: 90vw;
         height: 75vh;
     }
 
     ul {
+        width: 75vw;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin: 0 auto;
+        border: 3px solid #FFF;
+        border-radius: 25px;
     }
 
     ul > li {
         margin: 2em 0 2em 0;
+        line-height: 4vh;
     }
 
     ul > li > a {
-        font-family: Lobster;
-        font-size: 4em;
+        font-family: Silkscreen;
+        font-size: 1.5vw;
         font-weight: bolder;
-        -webkit-text-stroke: .1px white;
         letter-spacing: .05em;
         text-decoration: none;
-        color: black;
+        margin: auto;
+        color: white;
     }
 
     footer {
-        width: 100vw;
-        height: 12.5vh;
+        height: 100vh;
+        margin: auto 0;
+    }
+
+    footer > nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50vh;
         display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
 
-    footer > a {
-        margin: 1em 8em;
+    footer > nav > a {
+        margin: 1em 1em 1em .5em;
+        padding: .5em 0 .5em 0;
     }
 
-    footer > a > svg {
-        width: 64px;
-        height: 64px;
+    footer > nav > a > svg {
+        width: 50px;
+        height: 50px;
         border-radius: 0 0 45% 45%;
-        transition: transform .4s linear, box-shadow .4s ease-in-out;
+        transition: transform .3s linear;
     }
 
-    footer > a > svg:hover {
+    footer > nav > a > svg:hover {
         transform: scale(1.3);
-        transform: rotateX(30deg);
-        box-shadow: 0px 12px 10px -7px rgba(65, 65, 65, 0.5);
-
     }
 }
