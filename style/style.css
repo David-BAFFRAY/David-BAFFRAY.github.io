@@ -1,20 +1,23 @@
 body {
     width: 100vw;
-    height: 75%;
+    height: 100vh;
     background: rgb(25,29,30);
     background: linear-gradient(0deg, rgba(25,29,30,1) 0%, rgba(60,74,87,1) 100%);
     display: grid;
 }
 
 body > header {
+    height: 10vh;
     grid-area: head;
 }
 
 body > main {
+    height: 75vh;
     grid-area: bod;
 }
 
 body > footer {
+    height: 15vh;
     grid-area: foot;
 }
 
@@ -27,16 +30,15 @@ body > footer {
             "head"
             "bod"
             "foot";
+        overflow-y: hidden;
     }
 
     header {
-        width: 100%;
-        height: 8vh;
+        width: 100vw;
     }
 
     main {
-        width: 100%;
-        height: 75vh;
+        width: 100vw;
     }
 
     ul {
@@ -52,7 +54,7 @@ body > footer {
     }
 
     ul > li {
-        margin: 2em 0 2em 0;
+        margin: 1em 0 1em 0;
         line-height: 4vh;
     }
 
@@ -65,11 +67,6 @@ body > footer {
         text-align: center;
         margin: auto;
         color: white;
-    }
-
-    footer {
-        height: 100vh;
-        margin: auto 0;
     }
 
     footer > nav {
@@ -98,82 +95,9 @@ body > footer {
     }
 }
 
-/* ============== Responsive design for landscape mobile ============== */
-
-@media screen and (min-width: 320px) and (max-width: 926px) and (orientation: landscape) {
-    body {
-        grid-template-areas: 
-        "foot head"
-        "foot bod"
-        "foot bod";
-    }
-
-    header {
-        width: 90vw;
-    }
-
-    main {
-        width: 90vw;
-        height: auto;
-    }
-
-    ul {
-        width: 75vw;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        border: 3px solid #FFF;
-        border-radius: 25px;
-    }
-
-    ul > li {
-        margin: 2em 0 2em 0;
-        line-height: 4vh;
-    }
-
-    ul > li > a {
-        font-family: Silkscreen;
-        font-size: 2.5vw;
-        font-weight: bolder;
-        letter-spacing: .05em;
-        text-decoration: none;
-        text-align: center;
-        margin: auto;
-        color: white;
-    }
-
-    footer {
-        height: 100vh;
-        margin: auto 0;
-    }
-
-    footer > nav {
-        width: 100vw;
-        height: 10vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        margin-top: 10em;
-    }
-
-    footer > nav > a {
-        margin: 1em 1em 1em .5em;
-        padding: .5em 0 .5em 0;
-    }
-
-    footer > nav > a > svg {
-        width: 9vw;
-        height: 9vh;
-        border-radius: 0 0 45% 45%;
-    }
-}
-
 /* ============== Responsive design for tablet ============== */
 
-@media only screen and (min-width: 430px) and (max-width: 834px) {
+@media only screen and (min-width: 430px) and (max-width: 900px) {
 
     body {
         grid-template-areas: 
@@ -182,19 +106,12 @@ body > footer {
         "foot";
     }
 
-    header {
-        width: 100%;
-        height: 12.5vh;
-    }
-
     main {
-        width: 100%;
         height: 75vh;
     }
 
     ul {
-        width: 75vw;
-        height: auto;
+        width: 85vw;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -221,8 +138,7 @@ body > footer {
     }
 
     footer {
-        height: 100vh;
-        margin: auto 0;
+        height: 15vh;
     }
 
     footer > nav {
@@ -232,20 +148,18 @@ body > footer {
     }
 
     footer > nav > a {
-        margin: 1em 1em 1em .5em;
-        padding: .5em 0 .5em 0;
+        margin: 0 1em 0 .5em;
     }
 
     footer > nav > a > svg {
-        width: 50px;
-        height: 50px;
-        border-radius: 0 0 45% 45%;
+        width: 5.5vw;
+        height: 5.5vw;
     }
 }
 
 /* ============== Responsive design for desktop ============== */
 
-@media only screen and (min-width: 835px) {
+@media only screen and (min-width: 901px) {
 
     body {
         grid-template-areas: 
@@ -256,17 +170,14 @@ body > footer {
 
     header {
         width: 90vw;
-        height: 12.5vh;
     }
 
     main {
         width: 90vw;
-        height: 75vh;
     }
 
     ul {
         width: 75vw;
-        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -283,7 +194,7 @@ body > footer {
 
     ul > li > a {
         font-family: Silkscreen;
-        font-size: 1.5vw;
+        font-size: 2vw;
         font-weight: bolder;
         letter-spacing: .05em;
         text-decoration: none;
