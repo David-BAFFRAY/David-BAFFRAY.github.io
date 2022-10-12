@@ -7,7 +7,6 @@ body {
 }
 
 body > header {
-    height: 10vh;
     grid-area: head;
 }
 
@@ -38,6 +37,7 @@ body > footer {
     }
 
     main {
+        height: 65vh;
         width: 100vw;
     }
 
@@ -69,15 +69,14 @@ body > footer {
         color: white;
     }
 
+    footer {
+        height: 20vh;
+    }
+
     footer > nav {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
-    }
-
-    footer > nav > a {
-        margin: 1em 1em 1em .5em;
-        padding: .5em 0 .5em 0;
     }
 
     footer > nav > a > svg {
