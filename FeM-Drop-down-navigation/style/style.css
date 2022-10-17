@@ -1,0 +1,1107 @@
+body {
+  display: grid;
+  height: auto;
+  grid-template-areas: 
+  "header"
+  "section"
+  "footer";
+}
+
+header {
+  grid-area: header;
+}
+  
+main > section {
+  grid-area: section;
+}
+  
+footer {
+  grid-area: footer;
+}
+
+/*! ============== Responsive design for mobile ============== */
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 430px)
+  and (orientation: portrait) {
+
+  body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 1fr 10vh; 
+    overflow-x: hidden;
+    transition: all .3s ease;
+  }
+
+  body.on {
+      background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  header > .nav__mobile {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__mobile > svg {
+    margin-top: 1.5em;
+  }
+
+  .nav__mobile > .btn__burger {
+    width: 15vw;
+    height: 8vh;
+    margin-right: .5em;
+    z-index: 10;
+  }
+
+  .nav__mobile > .btn__burger > svg {
+    width: 25vw;
+    height: 4vh;
+    position: absolute;
+    right: 1em;
+    top: 3em;
+  }
+
+  .nav__mobile > .btn__burger.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  nav > .sidebar {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 70%;
+    height: 100%;
+    padding-top: 5em;
+    background: whitesmoke;
+    transition: all .5s ease;
+  }
+
+  nav > .sidebar.close {
+    left: 8em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu {
+    padding-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label >
+  svg:nth-child(2) {
+    margin: 0 0 .2em .3em;
+    translate: all 0s ease;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu svg {
+    transform: rotateX(180deg);
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label > 
+  a {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu {
+    display: none;
+    padding: 1em 0 1em 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li {
+    margin-bottom: 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  svg {
+    padding-right: 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  a {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label > 
+  .link_name {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu > 
+  .sub-menu {
+    display: block;
+  }
+
+  .nav-links > li {
+    padding-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  .nav-links > li > a {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  .group__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
+  .group__button > button {
+      width: 50vw;
+      height: 5vh;
+      font-family: Epilogue;
+      background-color: whitesmoke;
+      border: 2px solid black;
+      border-radius: 10px;
+  }
+
+  .group__button > button:nth-child(1) {
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  section > picture > img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+  }
+    
+  section > article > h1 {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 1em 0 .5em 0;
+  }
+
+  section > article > p {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    text-align: center;
+    padding: 0 .2em;
+    color: gray;
+  }
+
+  section > article > button {
+    display: block;
+    width: 45%;
+    height: 3.2em;
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.3em;
+    padding: 0 .5em;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    margin: 1.5em auto;
+  }
+
+  section > article > .link--client {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer {
+    margin: auto;
+  }
+
+  footer > .attribution {
+    font-family: Epilogue;
+    margin: 1em .3em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+
+  footer > .attribution > a {
+    color: green;
+    text-decoration: none;
+  }
+}
+
+/*! ============== Responsive design for mobile in landscape ============== */
+
+@media only screen 
+  and (min-width: 320px) 
+  and (max-width: 928px)
+  and (orientation: landscape) {
+
+  body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh 1fr 10vh; 
+    overflow-x: hidden;
+    transition: all .3s ease;
+  }
+
+  body.on {
+      background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  header > .nav__mobile {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__mobile > svg {
+    margin-top: 1.5em;
+  }
+
+  .nav__mobile > .btn__burger {
+    width: 10vw;
+    height: 8vh;
+    z-index: 10;
+  }
+
+  .nav__mobile > .btn__burger > svg {
+    width: 25vw;
+    height: 4vh;
+    position: absolute;
+    right: 1em;
+    top: 3em;
+  }
+
+  .nav__mobile > .btn__burger.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  nav > .sidebar {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 50%;
+    height: 66em;
+    padding-top: 5em;
+    background: whitesmoke;
+    transition: all .5s ease;
+  }
+
+  nav > .sidebar.close {
+    left: 50%;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu {
+    padding-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label >
+  svg:nth-child(2) {
+    margin: 0 0 .2em .3em;
+    translate: all 0s ease;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu svg {
+    transform: rotateX(180deg);
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label {
+    margin-left: 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label > 
+  .link_name {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu {
+    display: none;
+    padding: 1em 0 1em 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li {
+    margin: 0 0 1.5em 1.5em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  svg {
+    padding-right: 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  a {
+    font-family: Epilogue;
+    color: gray;
+    text-decoration: none;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu > 
+  .sub-menu {
+    display: block;
+  }
+
+  .nav-links > li {
+    padding-left: 3em;
+    margin-bottom: 2em;
+  }
+
+  .nav-links > li > a {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  .group__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+  }
+
+  .group__button > button {
+      width: 20vw;
+      height: 10vh;
+      font-family: Epilogue;
+      background-color: whitesmoke;
+      border: 2px solid black;
+      border-radius: 10px;
+  }
+
+  .group__button > button:nth-child(1) {
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  section > picture > img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  section > picture > img {
+    display: block;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: auto;
+  }
+    
+  section > article > h1 {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 1em 0 .5em 0;
+  }
+
+  section > article > p {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    text-align: center;
+    padding: 0 .2em;
+    color: gray;
+  }
+
+  section > article > button {
+    display: block;
+    width: 45%;
+    height: 3.2em;
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.3em;
+    padding: 0 .5em;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    margin: 1.5em auto;
+  }
+
+  section > article > .link--client {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer {
+    margin: auto;
+  }
+
+  footer > .attribution {
+    font-family: Epilogue;
+    margin: 1em .3em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+
+  footer > .attribution > a {
+    color: green;
+    text-decoration: none;
+  }
+}
+
+/*! ============== Responsive design for tablet ============== */
+
+@media only screen 
+  and (min-width: 431px) 
+  and (max-width: 1024px)
+  and (orientation: portrait)  {
+
+  body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 1fr 10vh; 
+    overflow-x: hidden;
+    transition: all .3s ease;
+  }
+
+  body.on {
+      background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  header > .nav__mobile {
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav__mobile > svg {
+    margin-top: 1.5em;
+  }
+
+  .nav__mobile > .btn__burger {
+    width: 10vw;
+    height: 8vh;
+    z-index: 10;
+  }
+
+  .nav__mobile > .btn__burger > svg {
+    width: 25vw;
+    height: 4vh;
+    position: absolute;
+    right: 1em;
+    top: 3em;
+  }
+
+  .nav__mobile > .btn__burger.hide {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  nav > .sidebar {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+    width: 60%;
+    height: 100%;
+    padding-top: 5em;
+    background: whitesmoke;
+    transition: all .5s ease;
+  }
+
+  nav > .sidebar.close {
+    left: 45%;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu {
+    padding-left: 1em;
+    margin-bottom: 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label >
+  svg:nth-child(2) {
+    margin: 0 0 .2em .3em;
+    translate: all 0s ease;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu 
+  label > 
+  svg {
+    transform: rotateX(180deg);
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .arrow {
+    margin-left: 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label > 
+  .link_name {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu {
+    display: none;
+    padding: 1em 0 1em 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li {
+    margin: 0 0 2em 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  svg {
+    padding-right: 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  a {
+    font-family: Epilogue;
+    color: gray;
+    text-decoration: none;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu > 
+  .sub-menu {
+    display: block;
+  }
+
+  .nav-links > li {
+    padding-left: 4em;
+    margin-bottom: 2em;
+  }
+
+  .nav-links > li > a {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  .group__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5em auto;
+  }
+
+  .group__button > button {
+      width: 25vw;
+      height: 5vh;
+      font-family: Epilogue;
+      background-color: whitesmoke;
+      border: 2px solid black;
+      border-radius: 10px;
+  }
+
+  .group__button > button:nth-child(1) {
+    border: none;
+    background-color: whitesmoke;
+  }
+
+  section > picture > img {
+    display: block;
+    max-width: 100vw;
+    min-height: 55vh;
+    margin: auto;
+  }
+    
+  section > article > h1 {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 2.2em;
+    text-align: center;
+    margin: 1em 0 .5em 0;
+  }
+
+  section > article > p {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.2em;
+    line-height: 1.3em;
+    text-align: center;
+    padding: 0 .2em;
+    color: gray;
+  }
+
+  section > article > button {
+    display: block;
+    width: 45%;
+    height: 3.2em;
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.3em;
+    padding: 0 .5em;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    margin: 1.5em auto;
+  }
+
+  section > article > .link--client {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer {
+    margin: auto;
+  }
+
+  footer > .attribution {
+    font-family: Epilogue;
+    margin: 1em .3em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+
+  footer > .attribution > a {
+    color: green;
+    text-decoration: none;
+  }
+}
+
+/*! ============== Responsive design for desktop and tablet in landscape ================= */
+
+@media only screen and (min-width: 1025px) {
+
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 89vh 1vh; 
+    grid-template-areas: 
+    "header"
+    "section"
+    "footer";
+    overflow-x: hidden;
+  }
+
+  header {
+    grid-area: header;
+  }
+    
+  main > section {
+    grid-area: section;
+  }
+    
+  footer {
+    grid-area: footer;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  header > .nav__mobile > svg {
+    margin: 1.5em 0 0 1em;
+  }
+
+  header > .nav__mobile > .btn__burger {
+    display: none;
+  }
+
+  header > nav > .sidebar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: baseline;
+    width: 85vw;
+    height: 6vh;
+  }
+        
+  header > nav > .sidebar > .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label {
+    width: 7.5em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  li {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label >
+  svg:nth-child(2) {
+    margin: 0 0 .2em .3em;
+    translate: all 0s ease;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu 
+  label > 
+  svg {
+    transform: rotateX(180deg);
+  }
+
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  label > 
+  .link_name {
+    text-decoration: none;
+    color: gray;
+    font-family: Epilogue;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu {
+    display: none;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu.showMenu .sub-menu {
+    display: block;
+    width: 7vw;
+    padding-right: 1em;
+    box-shadow: 0px 12px 15px -7px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 1em 0 .5em 0;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > a {
+    font-family: Epilogue;
+    text-decoration: none;
+    color: gray;
+    padding-left: .5em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  .block-menu > 
+  .sub-menu > 
+  li > 
+  a:nth-child(0) {
+    margin: 1em 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links >
+  .block-menu > 
+  .sub-menu .company {
+    width: 5.5em;
+    padding: 1em 1em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  li {
+    width: 5.5em;
+    font-family: Epilogue;
+    margin-left: 4em;
+  }
+
+  nav > 
+  .sidebar > 
+  .nav-links > 
+  li > a {
+    text-decoration: none;
+    color: gray;
+    margin-left: 3em;
+  }
+
+  .group__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 55vw;
+  }
+
+  .group__button > button {
+      width: 6vw;
+      height: 5vh;
+      font-family: Epilogue;
+      font-size: .8em;
+      border: 2px solid black;
+      border-radius: 15px;
+  }
+
+  .group__button > button:nth-child(2) {
+        transition: background-color .6s, color .6s linear;
+  }
+
+  .group__button > button:nth-child(2):hover {
+    background-color: #000;
+    color: white;
+  }
+
+  .group__button > button:nth-child(1) {
+  border: none;
+  background-color: white;
+  }
+
+  .link_name {
+    color: #808080;
+    font-family: Epilogue;
+  }
+
+  section {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;    
+  }
+
+  section > picture > img {
+    display: block;
+    max-width: 100vw;
+    height: 70vh;
+    margin: auto;
+  }
+  
+  section > article {
+    width: 40vw;
+  }
+
+  section > article > h1 {
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 5vw;
+    padding: 0 .7em 0 0;
+    margin: 1em 0 .5em 0;
+  }
+
+  section > article > p {
+    width: 75%;
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    padding: 0 1em 0 0;
+    color: gray;
+  }
+    
+  section > article > button {
+    width: 20%;
+    height: 3.5em;
+    font-family: Epilogue;
+    font-weight: 900;
+    font-size: .9em;
+    padding: 0 .5em;
+    border-radius: 15px;
+    color: white;
+    background-color: black;
+    margin: 4em auto 8em auto;
+    transition: background-color .6s, color .6s, border .4s linear; 
+  }
+  
+  section > article > button:hover {
+    background-color:white;
+    color: black;
+    border: 2px solid black;
+  }
+
+  .link--client {
+    width: 30vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  footer {
+    margin: auto;
+  }
+
+  footer > .attribution {
+    font-family: Epilogue;
+    margin: 1em .3em;
+    text-align: center;
+  }
+  
+  footer > .attribution > a {
+    color: green;
+    text-decoration: none;
+  }
+}
